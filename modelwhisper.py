@@ -27,7 +27,7 @@ class SSLModel(nn.Module):
         self.model = get_peft_model(self.model, config)
         self.model.print_trainable_parameters()
         self.device = device
-        self.out_dim = 768  # Correct Whisper small model output dimension
+        self.out_dim = 512  # Correct Whisper small model output dimension
         return
 
     def extract_feat(self, input_data):
